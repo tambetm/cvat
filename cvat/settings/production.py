@@ -31,3 +31,7 @@ DATABASES = {
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
     }
 }
+
+USE_X_FORWARDED_HOST = True
+ALLOWED_HOSTS = ['neuron.hpc.ut.ee']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
